@@ -8,6 +8,56 @@ import pandas as pd
 from sklearn.manifold import TSNE
 import seaborn as sns
 
+# GEMINI_EMBEDD = "models/text-embedding-004"
+# ADA_EMBEDD = "text-embedding-ada-002"
+
+# def get_embeddings(text: str, chunk_size: int = 2048):  # 2K characters to avoid exceeding limit
+#     """Gera embeddings por texto preprocessado"""
+
+#     encoding = tiktoken.encoding_for_model(ADA_EMBEDD)
+#     num_tokens = len(encoding.encode(text))
+
+#     # Quebra em chunks, se maior que chunk_size
+#     if num_tokens > chunk_size:
+#         chunks = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
+#         embeddings = []
+#         for chunk in chunks:
+#             result = genai.embed_content(
+#                 model=GEMINI_EMBEDD,
+#                 content=chunk
+#             )
+#             embeddings.extend(result['embedding'])  # Estende a lista de embeddings com resultado por chunk
+#         return embeddings
+#     else:
+#         # Process text as usual if it's within the size limit
+#         result = genai.embed_content(
+#             model=GEMINI_EMBEDD,
+#             content=text
+#         )
+#         return result['embedding']
+
+
+# grupos_embeddings = pd.DataFrame()
+# grupos_embeddings['Processo'] = processos
+# grupos_embeddings['Doc_Tokens'] = tokens_docs
+# grupos_embeddings['Resumo_Tokens'] = tokens_resumo
+# grupos_embeddings['Resumo_Tokens_Stemmer'] = tokens_resumo_stemmer
+# grupos_embeddings['Resumo_Tokens_Lemma'] = tokens_resumo_lemma
+# grupos_embeddings['Parecer'] = pareceres_instrutivo
+
+
+# resumo_embed, resumo_embed_stemmer, resumo_embedd_lemma = [],[],[]
+
+# for index, row in votos.iterrows():
+#     resumo_embed.append(get_embeddings(row['Resumo']))
+#     resumo_embed_stemmer.append(get_embeddings(row['Resumo_Stemmer']))
+#     resumo_embedd_lemma.append(get_embeddings(row['Resumo_Lemma']))
+
+# grupos_embeddings['Resumo_Embed'] = resumo_embed
+# grupos_embeddings['Resumo_Embed_Stemmer'] = resumo_embed_stemmer
+# grupos_embeddings['Resumo_Embed_Lemma'] = resumo_embedd_lemma
+
+# grupos_embeddings.to_csv('data/grupos_embeddings.csv', sep=';', encoding='utf-8', index=False)
 
 
 # # Contagem de Pareceres

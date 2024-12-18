@@ -1,4 +1,5 @@
 # Importando as bibliotecas necessárias
+import sys
 import google.generativeai as genai
 import nltk
 import os
@@ -7,7 +8,7 @@ import re
 import spacy
 import tiktoken
 import zipfile
-
+import time
 
 from datetime import datetime, timedelta
 from docx import Document
@@ -16,7 +17,29 @@ from langchain_community.document_loaders import PyPDFLoader
 from nltk.corpus import stopwords
 from nltk.stem import RSLPStemmer
 from unidecode import unidecode
+import logging
 
+# Configurar o logger
+log_filename = os.path.splitext(os.path.basename(__file__))[0] + '.log'
+log_directory = 'log'
+os.makedirs(log_directory, exist_ok=True)
+log_path = os.path.join(log_directory, log_filename)
+
+logging.basicConfig(
+    filename=log_path,
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
+# Função para logar exceções
+def log_exception(exc_type, exc_value, exc_traceback):
+    logging.error("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
+
+sys.excepthook = log_exception
+logging.info("Iniciando a aplicação")
+
+time_exec = time.time()
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -42,6 +65,7 @@ def get_mondaydate_onweek():
     now = datetime.now()
     monday = now - timedelta(days = now.weekday())
     print(monday.date())
+    logging.info(f"Data da Segunda-feira da Semana: {monday.date()}")
 
 # Coloca os arquivos no diretório especificado
 def extract_zip(zip_file_path, extract_dir):
@@ -86,6 +110,8 @@ def preprocess_text(text, use_lemma=False, use_stemm=False):
 
 
 print(f"Iniciando a aplicação às {datetime.now():%Y-%m-%d %H:%M:%S}")
+logging.info(f"Iniciando a aplicação às {datetime.now():%Y-%m-%d %H:%M:%S}")
+inicio = time.time()
 
 PATTERN_VOTO_RELATOR    = r"\barquivamento\b|\bcomunicação\b|encaminhamento\b"
 PATTERN_STATUS_PARECER  = r"de acordo|parcialmente|desacordo"
@@ -128,6 +154,7 @@ def get_len_tokens(text:str) -> int:
     """Counting Tokens for Summarization Models"""
     encoding = tiktoken.encoding_for_model(MODEL_GPT_35_TURBO)
     # print(f"Were found {tokens} tokens in Document file of the {filename}.")
+    logging.info(f"Quantidade de tokens no texto: {len(encoding.encode(text))}")
     return len(encoding.encode(text))
 
 def get_length_resumo(text:str) -> int:
@@ -228,45 +255,53 @@ def get_response(text:str, prompt:str = '') -> str:
 
 
     response = model.generate_content(conversation, request_options={"timeout": 600})
-    print(response.usage_metadata)
+    # print(response.usage_metadata)
+    logging.info(f"{response.usage_metadata}")
 
     doc = nlp(response.text)
     return ' '.join([sent.text for sent in doc.sents])
 
+
 # Obtaining all docs from that session date
-docs = pd.read_csv('data/doc_votos.csv', sep=';', encoding= 'unicode_escape')
+docs = pd.read_csv('data/doc_votos.csv', sep=';', encoding= 'utf-8')
+# docs = pd.read_excel('data/doc_representacao.xlsx', engine='openpyxl')
 
 # ordenando os votos pelo maiores texto
-docs_sort = docs.sort_values(by='LENGTH_TEXTO', ascending=False)
+docs_sort = docs.sort_values(by='LENGTH', ascending=False)
 docs_sort.reset_index(drop=True, inplace=True)
 print(docs_sort)
+logging.info(f"Amostra dos dados de documentos: {docs_sort}")
 
-# Query the DataFrame for rows where the 'TEXTO' column contains 'APOSENTADORIA' or 'REPRESENTAÇÃO'
+# Selecionando o TEXTO conforme ASSUNTO: APOSENTADORIA
 df_aposentadoria = docs_sort[docs_sort['TEXTO'].str.contains('ASSUNTO: APOSENTADORIA', case=False, na=False)]
-
-# Query the DataFrame for rows where the 'TEXTO' column contains 'APOSENTADORIA' or 'REPRESENTAÇÃO'
-df_representacao = docs_sort[docs_sort['TEXTO'].str.contains('ASSUNTO: REPRESENTAÇÃO', case=False, na=False)]
-
 docs_aposentadoria = df_aposentadoria.set_index('PROCESSO')['TEXTO'].to_dict()
 aposentadoria_10_itens = dict(list(docs_aposentadoria.items()))
-print(len(list(aposentadoria_10_itens.items())))
 
+# Selecionando o TEXTO conforme ASSUNTO: REPRESENTAÇÃO
+df_representacao = docs_sort[docs_sort['TEXTO'].str.contains('ASSUNTO: REPRESENTAÇÃO', case=False, na=False)]
 docs_representacao = df_representacao.set_index('PROCESSO')['TEXTO'].to_dict()
 representacao_10_itens = dict(list(docs_representacao.items()))
-print(len(list(representacao_10_itens.items())))
+
+# Carregando todos os documentos
+df_docs = docs_sort.set_index('PROCESSO')['TEXTO'].to_dict()
+df_docs = dict(list(df_docs.items()))
+print(len(list(df_docs.items())))
+input("Pressione Enter para continuar...")
 
 # Resumo de Votos Estruturado
 processos, resumos, entidades, pareceres, pareceres_mpc, pareceres_instrutivo, decisoes = [],[],[],[],[],[],[]
 docs, tokens_docs, tokens_resumo, tokens_lemma, docs_lemma, tokens_stemmer, tokens_resumo_lemma, tokens_resumo_stemmer,docs_stemmer, resumos_lemma, resumos_stemmer  = [],[],[],[],[],[],[],[],[],[],[]
 
 # Processar os primeiros 10 itens
-for processo in aposentadoria_10_itens.keys():
+start_inicio = time.time()
+for processo in df_docs.keys():
     print("\nProcessando o documento do Processo Nº ",processo)
-    documento = aposentadoria_10_itens.get(processo)
+    documento = df_docs.get(processo)
     num_processo = processo
     tokens = get_len_tokens(documento)
     if tokens <= 131072:
-        print("O documento do Processo Nº "+processo+" contém ", tokens)
+        print("\nO documento do Processo Nº "+processo+" contém ", tokens)
+        logging.info(f"O documento do Processo Nº {processo} contém {tokens} tokens.")
         processos.append(num_processo)
         docs.append(documento)
         tokens_docs.append(tokens)
@@ -290,13 +325,18 @@ for processo in aposentadoria_10_itens.keys():
         pareceres_mpc.append(status_parecer)
         pareceres_instrutivo.append(status_parecer)
         decisoes.append(get_decisao_voto(documento))
+        print(f"O documento do Processo Nº {processo}, foi processado em {time.time() - start_inicio:.2f} segundos.")
+        logging.info(f"O documento do Processo Nº {processo}, foi processado em {time.time() - start_inicio:.2f} segundos.")
     else:
         msg = f"O documento do Processo Nº {processo} está superior ao limite de 128K tokens {tokens} permitido pelo modelo {MODEL_GOOGLE_GEMINI}"
         print(msg)
+        logging.info(msg)
+
+print(f"\nProcedimento de sumarização finalizado às {datetime.now()} com tempo de execução de {time.time() - inicio:.2f} segundos.\n")
+logging.info(f"Procedimento de sumarização finalizado às {datetime.now()} com tempo de execução de {time.time() - inicio:.2f} segundos.\n")
 
 votos = pd.DataFrame()
 votos['Processo'] = processos
-
 votos['Texto'] = docs
 votos['Texto_Tokens'] = tokens_docs
 votos['Resumo'] = resumos
@@ -321,55 +361,6 @@ votos['Decisão'] = decisoes
 
 # Salvar o resumo dos votos
 votos.to_csv('data/resumo_sumaria.csv', sep=';', encoding='utf-8', index=False)
-
-# Processar os primeiros 10 itens
-GEMINI_EMBEDD = "models/text-embedding-004"
-ADA_EMBEDD = "text-embedding-ada-002"
-
-def get_embeddings(text: str, chunk_size: int = 2048):  # 2K characters to avoid exceeding limit
-    """Gera embeddings por texto preprocessado"""
-
-    encoding = tiktoken.encoding_for_model(ADA_EMBEDD)
-    num_tokens = len(encoding.encode(text))
-
-    # Quebra em chunks, se maior que chunk_size
-    if num_tokens > chunk_size:
-        chunks = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
-        embeddings = []
-        for chunk in chunks:
-            result = genai.embed_content(
-                model=GEMINI_EMBEDD,
-                content=chunk
-            )
-            embeddings.extend(result['embedding'])  # Estende a lista de embeddings com resultado por chunk
-        return embeddings
-    else:
-        # Process text as usual if it's within the size limit
-        result = genai.embed_content(
-            model=GEMINI_EMBEDD,
-            content=text
-        )
-        return result['embedding']
-
-
-grupos_embeddings = pd.DataFrame()
-grupos_embeddings['Processo'] = processos
-grupos_embeddings['Doc_Tokens'] = tokens_docs
-grupos_embeddings['Resumo_Tokens'] = tokens_resumo
-grupos_embeddings['Resumo_Tokens_Stemmer'] = tokens_resumo_stemmer
-grupos_embeddings['Resumo_Tokens_Lemma'] = tokens_resumo_lemma
-grupos_embeddings['Parecer'] = pareceres_instrutivo
-
-
-resumo_embed, resumo_embed_stemmer, resumo_embedd_lemma = [],[],[]
-
-for index, row in votos.iterrows():
-    resumo_embed.append(get_embeddings(row['Resumo']))
-    resumo_embed_stemmer.append(get_embeddings(row['Resumo_Stemmer']))
-    resumo_embedd_lemma.append(get_embeddings(row['Resumo_Lemma']))
-
-grupos_embeddings['Resumo_Embed'] = resumo_embed
-grupos_embeddings['Resumo_Embed_Stemmer'] = resumo_embed_stemmer
-grupos_embeddings['Resumo_Embed_Lemma'] = resumo_embedd_lemma
-
-grupos_embeddings.to_csv('data/grupos_embeddings.csv', sep=';', encoding='utf-8', index=False)
+print(f"Finalizando a aplicação às {datetime.now():%Y-%m-%d %H:%M:%S} com tempo de execução de {time.time() - time_exec:.2f} segundos.")
+logging.info(f"Finalizando a aplicação às {datetime.now():%Y-%m-%d %H:%M:%S} com tempo de execução de {time.time() - time_exec:.2f} segundos.")
+sys.exit(0)

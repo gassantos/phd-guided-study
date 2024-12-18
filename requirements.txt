@@ -7,6 +7,7 @@ langchain-community==0.3.9
 matplotlib==3.9.3
 nltk==3.9.1
 pandas==2.2.3
+pulp==2.9.0
 pydrive2==1.21.3
 python-docx==1.1.2
 python-dotenv==1.0.1
