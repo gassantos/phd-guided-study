@@ -1,0 +1,514 @@
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\GustavoAlexandre\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package rslp to
+[nltk_data]     C:\Users\GustavoAlexandre\AppData\Roaming\nltk_data...
+[nltk_data]   Package rslp is already up-to-date!
+Iniciando a aplicação às 2024-12-17 10:03:17
+           PROCESSO                         PAUTA  ... LENGTH_TEXTO                                              TEXTO
+0     100836-2/2023  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...        97766                                                ...
+1     211036-5/2019  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...        72890  VOTO RMN PROCESSO: TCE-RJ N° 211.036-5/19 ORIG...
+2     203019-2/2024  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...        72772  TRIBUNAL DE CONTAS DO ESTADO DO RIO DE JANEIRO...
+3     205920-6/2014  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...        67654                                                ...
+4     247426-3/2023  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...        67164  TRIBUNAL DE CONTAS DO ESTADO DO RIO DE JANEIRO...
+...             ...                           ...  ...          ...                                                ...
+2373  105278-1/2024  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...         1469  PLENÁRIO   PROCESSO: \tTCE-RJ\t105.278-1/24 OR...
+2374  102432-8/2024  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...         1469  PLENÁRIO   PROCESSO: \tTCE-RJ\t102.432-8/24 OR...
+2375  255229-1/2023  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...         1468  PLENÁRIO  PROCESSO: \tTCE-RJ\t255.229-1/23 ORI...
+2376  102322-7/2024  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...         1468  PLENÁRIO   PROCESSO: \tTCE-RJ\t102.322-7/24 OR...
+2377  100444-5/2023  PLENÁRIO VIRTUAL (ORDINÁRIA)  ...         1466  PLENÁRIO   PROCESSO: \tTCE-RJ\t100.444-5/23 OR...
+
+[2378 rows x 6 columns]
+Procedimento de sumarização iniciado às 2024-12-17 10:03:19.017278
+
+
+O documento do Processo Nº 100367-7/2021 contém  4817
+O documento do Processo Nº 100367-7/2021, foi processado em 42.86 segundos.
+
+O documento do Processo Nº 201921-1/2022 contém  4440
+O documento do Processo Nº 201921-1/2022, foi processado em 37.90 segundos.
+
+O documento do Processo Nº 226191-0/2015 contém  3356
+O documento do Processo Nº 226191-0/2015, foi processado em 30.21 segundos.
+
+O documento do Processo Nº 240655-7/2023 contém  2527
+O documento do Processo Nº 240655-7/2023, foi processado em 26.94 segundos.
+
+O documento do Processo Nº 100928-3/2024 contém  2495
+O documento do Processo Nº 100928-3/2024, foi processado em 27.20 segundos.
+
+O documento do Processo Nº 101721-0/2024 contém  2495
+O documento do Processo Nº 101721-0/2024, foi processado em 27.53 segundos.
+
+O documento do Processo Nº 101590-9/2024 contém  2495
+O documento do Processo Nº 101590-9/2024, foi processado em 26.27 segundos.
+
+O documento do Processo Nº 101086-8/2024 contém  2495
+O documento do Processo Nº 101086-8/2024, foi processado em 25.63 segundos.
+
+O documento do Processo Nº 101965-8/2024 contém  2495
+O documento do Processo Nº 101965-8/2024, foi processado em 26.15 segundos.
+
+O documento do Processo Nº 101996-7/2024 contém  2495
+O documento do Processo Nº 101996-7/2024, foi processado em 25.02 segundos.
+
+O documento do Processo Nº 101889-8/2024 contém  2495
+O documento do Processo Nº 101889-8/2024, foi processado em 26.77 segundos.
+
+O documento do Processo Nº 101927-6/2024 contém  2495
+O documento do Processo Nº 101927-6/2024, foi processado em 26.58 segundos.
+
+O documento do Processo Nº 101789-2/2024 contém  2495
+O documento do Processo Nº 101789-2/2024, foi processado em 26.36 segundos.
+
+O documento do Processo Nº 116465-3/2023 contém  2495
+O documento do Processo Nº 116465-3/2023, foi processado em 27.42 segundos.
+
+O documento do Processo Nº 101453-5/2024 contém  2495
+O documento do Processo Nº 101453-5/2024, foi processado em 26.46 segundos.
+
+O documento do Processo Nº 212415-3/2023 contém  2016
+O documento do Processo Nº 212415-3/2023, foi processado em 24.17 segundos.
+
+O documento do Processo Nº 102218-0/2024 contém  2002
+O documento do Processo Nº 102218-0/2024, foi processado em 23.19 segundos.
+
+O documento do Processo Nº 107375-7/2023 contém  1981
+O documento do Processo Nº 107375-7/2023, foi processado em 21.92 segundos.
+
+O documento do Processo Nº 102341-3/2024 contém  1831
+O documento do Processo Nº 102341-3/2024, foi processado em 23.65 segundos.
+
+O documento do Processo Nº 102118-4/2024 contém  1823
+O documento do Processo Nº 102118-4/2024, foi processado em 24.04 segundos.
+
+O documento do Processo Nº 102294-4/2024 contém  1786
+O documento do Processo Nº 102294-4/2024, foi processado em 22.94 segundos.
+
+O documento do Processo Nº 113591-7/2023 contém  1791
+O documento do Processo Nº 113591-7/2023, foi processado em 21.79 segundos.
+
+O documento do Processo Nº 102162-5/2024 contém  1781
+O documento do Processo Nº 102162-5/2024, foi processado em 21.28 segundos.
+
+O documento do Processo Nº 102147-5/2024 contém  1780
+O documento do Processo Nº 102147-5/2024, foi processado em 21.92 segundos.
+
+O documento do Processo Nº 102321-3/2024 contém  1786
+O documento do Processo Nº 102321-3/2024, foi processado em 22.79 segundos.
+
+O documento do Processo Nº 102431-4/2024 contém  1788
+O documento do Processo Nº 102431-4/2024, foi processado em 23.37 segundos.
+
+O documento do Processo Nº 102166-1/2024 contém  1782
+O documento do Processo Nº 102166-1/2024, foi processado em 21.61 segundos.
+
+O documento do Processo Nº 101709-2/2024 contém  1772
+O documento do Processo Nº 101709-2/2024, foi processado em 22.66 segundos.
+
+O documento do Processo Nº 117302-2/2023 contém  1764
+O documento do Processo Nº 117302-2/2023, foi processado em 24.43 segundos.
+
+O documento do Processo Nº 106791-8/2023 contém  1718
+O documento do Processo Nº 106791-8/2023, foi processado em 23.81 segundos.
+
+O documento do Processo Nº 240327-2/2023 contém  1633
+O documento do Processo Nº 240327-2/2023, foi processado em 19.66 segundos.
+
+O documento do Processo Nº 260436-3/2023 contém  1627
+O documento do Processo Nº 260436-3/2023, foi processado em 18.76 segundos.
+
+O documento do Processo Nº 101450-3/2024 contém  1408
+O documento do Processo Nº 101450-3/2024, foi processado em 18.09 segundos.
+
+O documento do Processo Nº 105209-0/2024 contém  1408
+O documento do Processo Nº 105209-0/2024, foi processado em 17.51 segundos.
+
+O documento do Processo Nº 101610-5/2024 contém  1408
+O documento do Processo Nº 101610-5/2024, foi processado em 19.11 segundos.
+
+O documento do Processo Nº 104585-5/2024 contém  1408
+O documento do Processo Nº 104585-5/2024, foi processado em 17.51 segundos.
+
+O documento do Processo Nº 104520-5/2024 contém  1408
+O documento do Processo Nº 104520-5/2024, foi processado em 16.42 segundos.
+
+O documento do Processo Nº 105281-8/2024 contém  1408
+O documento do Processo Nº 105281-8/2024, foi processado em 17.71 segundos.
+
+O documento do Processo Nº 105216-3/2024 contém  1408
+O documento do Processo Nº 105216-3/2024, foi processado em 17.54 segundos.
+
+O documento do Processo Nº 105205-4/2024 contém  1408
+O documento do Processo Nº 105205-4/2024, foi processado em 17.14 segundos.
+
+O documento do Processo Nº 104553-2/2024 contém  1391
+O documento do Processo Nº 104553-2/2024, foi processado em 16.02 segundos.
+
+O documento do Processo Nº 105863-2/2024 contém  1391
+O documento do Processo Nº 105863-2/2024, foi processado em 16.47 segundos.
+
+O documento do Processo Nº 104733-4/2024 contém  1391
+O documento do Processo Nº 104733-4/2024, foi processado em 16.31 segundos.
+
+O documento do Processo Nº 105983-8/2024 contém  1391
+O documento do Processo Nº 105983-8/2024, foi processado em 16.44 segundos.
+
+O documento do Processo Nº 105543-4/2024 contém  1391
+O documento do Processo Nº 105543-4/2024, foi processado em 16.42 segundos.
+
+O documento do Processo Nº 105773-1/2024 contém  1391
+O documento do Processo Nº 105773-1/2024, foi processado em 17.74 segundos.
+
+O documento do Processo Nº 105903-8/2024 contém  1391
+O documento do Processo Nº 105903-8/2024, foi processado em 16.50 segundos.
+
+O documento do Processo Nº 105376-9/2024 contém  1317
+O documento do Processo Nº 105376-9/2024, foi processado em 16.02 segundos.
+
+O documento do Processo Nº 105451-5/2024 contém  1317
+O documento do Processo Nº 105451-5/2024, foi processado em 15.64 segundos.
+
+O documento do Processo Nº 105418-3/2024 contém  1317
+O documento do Processo Nº 105418-3/2024, foi processado em 16.67 segundos.
+
+O documento do Processo Nº 105456-5/2024 contém  1304
+O documento do Processo Nº 105456-5/2024, foi processado em 16.06 segundos.
+
+O documento do Processo Nº 105406-0/2024 contém  1304
+O documento do Processo Nº 105406-0/2024, foi processado em 16.22 segundos.
+
+O documento do Processo Nº 105080-2/2024 contém  1309
+O documento do Processo Nº 105080-2/2024, foi processado em 15.58 segundos.
+
+O documento do Processo Nº 105075-7/2024 contém  1309
+O documento do Processo Nº 105075-7/2024, foi processado em 15.52 segundos.
+
+O documento do Processo Nº 255270-0/2023 contém  1396
+O documento do Processo Nº 255270-0/2023, foi processado em 17.40 segundos.
+
+O documento do Processo Nº 209431-6/2024 contém  1300
+O documento do Processo Nº 209431-6/2024, foi processado em 16.19 segundos.
+
+O documento do Processo Nº 209588-5/2024 contém  1300
+O documento do Processo Nº 209588-5/2024, foi processado em 15.87 segundos.
+
+O documento do Processo Nº 210830-5/2024 contém  1287
+O documento do Processo Nº 210830-5/2024, foi processado em 15.33 segundos.
+
+O documento do Processo Nº 206400-6/2024 contém  1287
+O documento do Processo Nº 206400-6/2024, foi processado em 15.60 segundos.
+
+O documento do Processo Nº 101582-2/2024 contém  1270
+O documento do Processo Nº 101582-2/2024, foi processado em 13.94 segundos.
+
+O documento do Processo Nº 102016-0/2024 contém  1270
+O documento do Processo Nº 102016-0/2024, foi processado em 16.62 segundos.
+
+O documento do Processo Nº 101451-7/2024 contém  1270
+O documento do Processo Nº 101451-7/2024, foi processado em 15.39 segundos.
+
+O documento do Processo Nº 117504-2/2023 contém  1260
+O documento do Processo Nº 117504-2/2023, foi processado em 15.95 segundos.
+
+O documento do Processo Nº 119402-2/2023 contém  1260
+O documento do Processo Nº 119402-2/2023, foi processado em 16.16 segundos.
+
+O documento do Processo Nº 103081-2/2024 contém  1267
+O documento do Processo Nº 103081-2/2024, foi processado em 14.76 segundos.
+
+O documento do Processo Nº 100795-4/2024 contém  1267
+O documento do Processo Nº 100795-4/2024, foi processado em 14.99 segundos.
+
+O documento do Processo Nº 102778-0/2024 contém  1267
+O documento do Processo Nº 102778-0/2024, foi processado em 15.42 segundos.
+
+O documento do Processo Nº 203708-1/2022 contém  1299
+O documento do Processo Nº 203708-1/2022, foi processado em 17.22 segundos.
+
+O documento do Processo Nº 251392-6/2023 contém  1233
+O documento do Processo Nº 251392-6/2023, foi processado em 16.48 segundos.
+
+O documento do Processo Nº 210384-6/2024 contém  1094
+O documento do Processo Nº 210384-6/2024, foi processado em 14.92 segundos.
+
+O documento do Processo Nº 220293-8/2018 contém  1214
+O documento do Processo Nº 220293-8/2018, foi processado em 14.87 segundos.
+
+O documento do Processo Nº 259931-4/2023 contém  1030
+O documento do Processo Nº 259931-4/2023, foi processado em 14.02 segundos.
+
+O documento do Processo Nº 111508-6/2023 contém  1004
+O documento do Processo Nº 111508-6/2023, foi processado em 13.52 segundos.
+
+O documento do Processo Nº 113370-1/2023 contém  1063
+O documento do Processo Nº 113370-1/2023, foi processado em 15.29 segundos.
+
+O documento do Processo Nº 239368-7/2023 contém  1002
+O documento do Processo Nº 239368-7/2023, foi processado em 15.48 segundos.
+
+O documento do Processo Nº 100929-4/2019 contém  1077
+O documento do Processo Nº 100929-4/2019, foi processado em 15.61 segundos.
+
+O documento do Processo Nº 114895-8/2023 contém  1008
+O documento do Processo Nº 114895-8/2023, foi processado em 14.56 segundos.
+
+O documento do Processo Nº 207783-3/2024 contém  997
+O documento do Processo Nº 207783-3/2024, foi processado em 15.92 segundos.
+
+O documento do Processo Nº 107528-6/2023 contém  953
+O documento do Processo Nº 107528-6/2023, foi processado em 13.94 segundos.
+
+O documento do Processo Nº 253114-6/2023 contém  959
+O documento do Processo Nº 253114-6/2023, foi processado em 15.58 segundos.
+
+O documento do Processo Nº 253094-0/2023 contém  956
+O documento do Processo Nº 253094-0/2023, foi processado em 14.91 segundos.
+
+O documento do Processo Nº 211909-9/2024 contém  968
+O documento do Processo Nº 211909-9/2024, foi processado em 15.07 segundos.
+
+O documento do Processo Nº 254429-6/2023 contém  957
+O documento do Processo Nº 254429-6/2023, foi processado em 16.16 segundos.
+
+O documento do Processo Nº 256329-4/2023 contém  953
+O documento do Processo Nº 256329-4/2023, foi processado em 16.04 segundos.
+
+O documento do Processo Nº 253363-9/2023 contém  921
+O documento do Processo Nº 253363-9/2023, foi processado em 13.91 segundos.
+
+O documento do Processo Nº 213869-7/2024 contém  965
+O documento do Processo Nº 213869-7/2024, foi processado em 15.11 segundos.
+
+O documento do Processo Nº 213541-7/2024 contém  918
+O documento do Processo Nº 213541-7/2024, foi processado em 15.57 segundos.
+
+O documento do Processo Nº 116526-3/2023 contém  930
+O documento do Processo Nº 116526-3/2023, foi processado em 13.81 segundos.
+
+O documento do Processo Nº 116981-7/2023 contém  854
+O documento do Processo Nº 116981-7/2023, foi processado em 13.62 segundos.
+
+O documento do Processo Nº 246172-7/2023 contém  832
+O documento do Processo Nº 246172-7/2023, foi processado em 13.89 segundos.
+
+O documento do Processo Nº 203944-1/2024 contém  836
+O documento do Processo Nº 203944-1/2024, foi processado em 13.94 segundos.
+
+O documento do Processo Nº 237737-8/2023 contém  804
+O documento do Processo Nº 237737-8/2023, foi processado em 13.46 segundos.
+
+O documento do Processo Nº 212933-7/2024 contém  834
+O documento do Processo Nº 212933-7/2024, foi processado em 13.88 segundos.
+
+O documento do Processo Nº 214352-1/2024 contém  831
+O documento do Processo Nº 214352-1/2024, foi processado em 13.70 segundos.
+
+O documento do Processo Nº 210767-0/2023 contém  774
+O documento do Processo Nº 210767-0/2023, foi processado em 13.36 segundos.
+
+O documento do Processo Nº 221779-7/2017 contém  713
+O documento do Processo Nº 221779-7/2017, foi processado em 12.95 segundos.
+
+O documento do Processo Nº 230342-5/2017 contém  711
+O documento do Processo Nº 230342-5/2017, foi processado em 13.77 segundos.
+
+O documento do Processo Nº 203998-2/2024 contém  665
+O documento do Processo Nº 203998-2/2024, foi processado em 13.76 segundos.
+
+O documento do Processo Nº 204010-3/2024 contém  648
+O documento do Processo Nº 204010-3/2024, foi processado em 13.78 segundos.
+
+O documento do Processo Nº 210243-6/2024 contém  640
+O documento do Processo Nº 210243-6/2024, foi processado em 12.75 segundos.
+
+O documento do Processo Nº 246848-8/2023 contém  632
+O documento do Processo Nº 246848-8/2023, foi processado em 14.13 segundos.
+
+O documento do Processo Nº 209773-2/2024 contém  630
+O documento do Processo Nº 209773-2/2024, foi processado em 12.42 segundos.
+
+O documento do Processo Nº 247255-2/2023 contém  629
+O documento do Processo Nº 247255-2/2023, foi processado em 13.66 segundos.
+
+O documento do Processo Nº 247359-4/2023 contém  626
+O documento do Processo Nº 247359-4/2023, foi processado em 12.73 segundos.
+
+O documento do Processo Nº 208334-5/2024 contém  625
+O documento do Processo Nº 208334-5/2024, foi processado em 13.36 segundos.
+
+O documento do Processo Nº 207781-5/2024 contém  626
+O documento do Processo Nº 207781-5/2024, foi processado em 12.40 segundos.
+
+O documento do Processo Nº 247211-6/2023 contém  622
+O documento do Processo Nº 247211-6/2023, foi processado em 12.89 segundos.
+
+O documento do Processo Nº 205676-0/2024 contém  625
+O documento do Processo Nº 205676-0/2024, foi processado em 12.17 segundos.
+
+O documento do Processo Nº 253799-2/2023 contém  615
+O documento do Processo Nº 253799-2/2023, foi processado em 12.94 segundos.
+
+O documento do Processo Nº 255556-2/2023 contém  619
+O documento do Processo Nº 255556-2/2023, foi processado em 12.72 segundos.
+
+O documento do Processo Nº 102046-5/2024 contém  613
+O documento do Processo Nº 102046-5/2024, foi processado em 12.40 segundos.
+
+O documento do Processo Nº 102627-5/2024 contém  613
+O documento do Processo Nº 102627-5/2024, foi processado em 13.06 segundos.
+
+O documento do Processo Nº 102501-5/2024 contém  616
+O documento do Processo Nº 102501-5/2024, foi processado em 14.68 segundos.
+
+O documento do Processo Nº 109359-7/2023 contém  612
+O documento do Processo Nº 109359-7/2023, foi processado em 13.02 segundos.
+
+O documento do Processo Nº 102462-3/2024 contém  613
+O documento do Processo Nº 102462-3/2024, foi processado em 12.00 segundos.
+
+O documento do Processo Nº 241154-0/2023 contém  609
+O documento do Processo Nº 241154-0/2023, foi processado em 13.15 segundos.
+
+O documento do Processo Nº 101478-5/2024 contém  611
+O documento do Processo Nº 101478-5/2024, foi processado em 12.29 segundos.
+
+O documento do Processo Nº 101288-8/2024 contém  612
+O documento do Processo Nº 101288-8/2024, foi processado em 13.02 segundos.
+
+O documento do Processo Nº 209503-5/2024 contém  637
+O documento do Processo Nº 209503-5/2024, foi processado em 13.48 segundos.
+
+O documento do Processo Nº 210201-8/2024 contém  653
+O documento do Processo Nº 210201-8/2024, foi processado em 12.96 segundos.
+
+O documento do Processo Nº 211182-3/2024 contém  647
+O documento do Processo Nº 211182-3/2024, foi processado em 13.51 segundos.
+
+O documento do Processo Nº 210199-9/2024 contém  650
+O documento do Processo Nº 210199-9/2024, foi processado em 13.70 segundos.
+
+O documento do Processo Nº 209973-4/2024 contém  639
+O documento do Processo Nº 209973-4/2024, foi processado em 13.49 segundos.
+
+O documento do Processo Nº 211421-7/2024 contém  639
+O documento do Processo Nº 211421-7/2024, foi processado em 13.62 segundos.
+
+O documento do Processo Nº 208814-5/2024 contém  633
+O documento do Processo Nº 208814-5/2024, foi processado em 13.40 segundos.
+
+O documento do Processo Nº 211003-1/2024 contém  636
+O documento do Processo Nº 211003-1/2024, foi processado em 13.42 segundos.
+
+O documento do Processo Nº 205246-1/2024 contém  625
+O documento do Processo Nº 205246-1/2024, foi processado em 12.81 segundos.
+
+O documento do Processo Nº 212924-6/2024 contém  622
+O documento do Processo Nº 212924-6/2024, foi processado em 13.91 segundos.
+
+O documento do Processo Nº 105467-4/2024 contém  617
+O documento do Processo Nº 105467-4/2024, foi processado em 12.96 segundos.
+
+O documento do Processo Nº 212914-1/2024 contém  622
+O documento do Processo Nº 212914-1/2024, foi processado em 13.25 segundos.
+
+O documento do Processo Nº 212907-8/2024 contém  622
+O documento do Processo Nº 212907-8/2024, foi processado em 13.29 segundos.
+
+O documento do Processo Nº 105039-3/2024 contém  620
+O documento do Processo Nº 105039-3/2024, foi processado em 13.73 segundos.
+
+O documento do Processo Nº 203960-5/2024 contém  627
+O documento do Processo Nº 203960-5/2024, foi processado em 12.72 segundos.
+
+O documento do Processo Nº 213570-8/2024 contém  629
+O documento do Processo Nº 213570-8/2024, foi processado em 13.36 segundos.
+
+O documento do Processo Nº 210005-2/2024 contém  619
+O documento do Processo Nº 210005-2/2024, foi processado em 12.87 segundos.
+
+O documento do Processo Nº 206911-5/2024 contém  624
+O documento do Processo Nº 206911-5/2024, foi processado em 13.55 segundos.
+
+O documento do Processo Nº 211687-3/2024 contém  619
+O documento do Processo Nº 211687-3/2024, foi processado em 13.61 segundos.
+
+O documento do Processo Nº 209506-7/2024 contém  623
+O documento do Processo Nº 209506-7/2024, foi processado em 12.45 segundos.
+
+O documento do Processo Nº 203265-3/2024 contém  621
+O documento do Processo Nº 203265-3/2024, foi processado em 13.35 segundos.
+
+O documento do Processo Nº 209202-3/2024 contém  624
+O documento do Processo Nº 209202-3/2024, foi processado em 13.00 segundos.
+
+O documento do Processo Nº 212938-7/2024 contém  618
+O documento do Processo Nº 212938-7/2024, foi processado em 13.01 segundos.
+
+O documento do Processo Nº 209712-8/2024 contém  622
+O documento do Processo Nº 209712-8/2024, foi processado em 12.63 segundos.
+
+O documento do Processo Nº 210371-9/2024 contém  625
+O documento do Processo Nº 210371-9/2024, foi processado em 13.40 segundos.
+
+O documento do Processo Nº 207223-3/2024 contém  618
+O documento do Processo Nº 207223-3/2024, foi processado em 12.83 segundos.
+
+O documento do Processo Nº 105092-5/2024 contém  623
+O documento do Processo Nº 105092-5/2024, foi processado em 12.48 segundos.
+
+O documento do Processo Nº 210266-8/2024 contém  618
+O documento do Processo Nº 210266-8/2024, foi processado em 13.21 segundos.
+
+O documento do Processo Nº 207148-7/2024 contém  618
+O documento do Processo Nº 207148-7/2024, foi processado em 13.18 segundos.
+
+O documento do Processo Nº 211233-8/2024 contém  618
+O documento do Processo Nº 211233-8/2024, foi processado em 13.03 segundos.
+
+O documento do Processo Nº 203953-2/2024 contém  617
+O documento do Processo Nº 203953-2/2024, foi processado em 13.27 segundos.
+
+O documento do Processo Nº 208839-5/2024 contém  617
+O documento do Processo Nº 208839-5/2024, foi processado em 13.44 segundos.
+
+O documento do Processo Nº 211668-7/2024 contém  619
+O documento do Processo Nº 211668-7/2024, foi processado em 13.31 segundos.
+
+O documento do Processo Nº 208158-9/2024 contém  619
+O documento do Processo Nº 208158-9/2024, foi processado em 12.31 segundos.
+
+O documento do Processo Nº 210214-5/2024 contém  612
+O documento do Processo Nº 210214-5/2024, foi processado em 13.50 segundos.
+
+O documento do Processo Nº 209351-0/2024 contém  615
+O documento do Processo Nº 209351-0/2024, foi processado em 13.03 segundos.
+
+O documento do Processo Nº 210216-3/2024 contém  616
+O documento do Processo Nº 210216-3/2024, foi processado em 13.29 segundos.
+
+O documento do Processo Nº 209648-1/2024 contém  621
+O documento do Processo Nº 209648-1/2024, foi processado em 12.94 segundos.
+
+O documento do Processo Nº 208558-3/2024 contém  614
+O documento do Processo Nº 208558-3/2024, foi processado em 13.47 segundos.
+
+O documento do Processo Nº 207739-2/2024 contém  613
+O documento do Processo Nº 207739-2/2024, foi processado em 13.52 segundos.
+
+O documento do Processo Nº 105069-8/2024 contém  611
+O documento do Processo Nº 105069-8/2024, foi processado em 12.80 segundos.
+
+O documento do Processo Nº 212611-1/2024 contém  545
+O documento do Processo Nº 212611-1/2024, foi processado em 13.85 segundos.
+
+O documento do Processo Nº 211637-8/2024 contém  547
+O documento do Processo Nº 211637-8/2024, foi processado em 12.88 segundos.
+
+O documento do Processo Nº 102433-2/2024 contém  540
+O documento do Processo Nº 102433-2/2024, foi processado em 12.66 segundos.
+
+Procedimento de sumarização finalizado às 2024-12-17 10:47:57.025782 com tempo de execução de 2678.01 segundos.
+
+Finalizando a aplicação às 2024-12-17 10:47:57 com tempo de execução de 2679.64 segundos.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
