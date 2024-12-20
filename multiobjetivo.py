@@ -27,10 +27,7 @@ weight_time = 0.4
 weight_cost = 0.3
 weight_energy = 0.3
 
-
 # === Variáveis de decisão ===
-from pulp import PULP_CBC_CMD
-
 # Quantidade de GPUs A e B utilizadas
 x1 = LpVariable("GPUs_A", lowBound=0, cat="Integer")
 x2 = LpVariable("GPUs_B", lowBound=0, cat="Integer")
@@ -57,7 +54,7 @@ model += (x1 * gpu_a_cost + x2 * gpu_b_cost <= max_budget), "Max_Budget"
 model += (x1 + x2 >= tasks), "Task_Completion"
 
 # === Resolver o problema ===
-# solver = "PULP_CBC_CMD"  # Escolha do solver (padrão do PuLP)
+# solver = "PULP_CBC_CMD"  (padrão PuLP)
 model.solve(PULP_CBC_CMD())
 
 # === Exibir os resultados ===

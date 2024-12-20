@@ -263,8 +263,8 @@ def get_response(text:str, prompt:str = '') -> str:
 
 
 # Obtaining all docs from that session date
-docs = pd.read_csv('data/doc_votos.csv', sep=';', encoding= 'utf-8')
-# docs = pd.read_excel('data/doc_representacao.xlsx', engine='openpyxl')
+# docs = pd.read_csv('data/doc_representacao.csv', sep=';', encoding= 'utf-8')
+docs = pd.read_excel('data/doc_representacao_multiobjetivo.xlsx')
 
 # ordenando os votos pelo maiores texto
 docs_sort = docs.sort_values(by='LENGTH', ascending=False)
@@ -285,12 +285,15 @@ representacao_10_itens = dict(list(docs_representacao.items()))
 # Carregando todos os documentos
 df_docs = docs_sort.set_index('PROCESSO')['TEXTO'].to_dict()
 df_docs = dict(list(df_docs.items()))
-print(len(list(df_docs.items())))
-input("Pressione Enter para continuar...")
+# print(len(list(df_docs.items())))
+# input("Pressione Enter para continuar...")
 
 # Resumo de Votos Estruturado
-processos, resumos, entidades, pareceres, pareceres_mpc, pareceres_instrutivo, decisoes = [],[],[],[],[],[],[]
-docs, tokens_docs, tokens_resumo, tokens_lemma, docs_lemma, tokens_stemmer, tokens_resumo_lemma, tokens_resumo_stemmer,docs_stemmer, resumos_lemma, resumos_stemmer  = [],[],[],[],[],[],[],[],[],[],[]
+processos, resumos, entidades, pareceres                   = [],[],[],[]
+pareceres_mpc, pareceres_instrutivo, decisoes              = [],[],[]
+docs, tokens_docs, tokens_resumo, tokens_lemma, docs_lemma = [],[],[],[],[]
+tokens_stemmer, tokens_resumo_lemma, tokens_resumo_stemmer = [],[],[]
+docs_stemmer, resumos_lemma, resumos_stemmer, runtime      = [],[],[],[]
 
 # Processar os primeiros 10 itens
 start_inicio = time.time()
@@ -325,7 +328,9 @@ for processo in df_docs.keys():
         pareceres_mpc.append(status_parecer)
         pareceres_instrutivo.append(status_parecer)
         decisoes.append(get_decisao_voto(documento))
-        print(f"O documento do Processo Nº {processo}, foi processado em {time.time() - start_inicio:.2f} segundos.")
+        run_time = round(time.time() - start_inicio, 2)
+        runtime.append(run_time)
+        print(f"O documento do Processo Nº {processo}, foi processado em {run_time} segundos.")
         logging.info(f"O documento do Processo Nº {processo}, foi processado em {time.time() - start_inicio:.2f} segundos.")
     else:
         msg = f"O documento do Processo Nº {processo} está superior ao limite de 128K tokens {tokens} permitido pelo modelo {MODEL_GOOGLE_GEMINI}"
