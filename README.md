@@ -6,6 +6,8 @@ This repository contains materials and progress related to the **Guided Study Di
 
 The repository focuses on developing approaches and solutions within the discipline, particularly targeting challenges in data provenance in LLMs, Integer Programming and resource management.
 
+In addition, there is a notebook of this preliminar study avaliable in *https://colab.research.google.com/drive/1PUejE7TmQ4WuTrvVlF2fgF8sNDBCy576*.
+
 ## Key Considerations
 
 The study is framed around the following core factors:
