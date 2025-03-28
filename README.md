@@ -24,3 +24,10 @@ The study is framed around the following core factors:
 - To explore innovative methods in multi-objective optimization.
 - To document and share progress on practical implementations.
 - To contribute to the academic discourse through reproducible research.
+
+ ## Próximos passos
+- Definir duas estratégias de workflow a fim de minimizar um dos critérios objetivos.
+- Definir as possíveis frameworks/técnicas para o Workflow (Framework, CPUs, GPUs, Tipos de GPUs)
+- Cenários de VM ou Física
+- Estudar técnicas em https://python-mip.com/
+
