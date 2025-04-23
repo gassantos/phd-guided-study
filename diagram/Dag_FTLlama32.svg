@@ -1,0 +1,427 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="950pt" height="868pt" viewBox="0.00 0.00 949.52 867.50">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 863.5)">
+<title>LlamaFineTuningDAG</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-863.5 945.52,-863.5 945.52,4 -4,4"/>
+<!-- DocData -->
+<g id="node1" class="node">
+<title>DocData</title>
+<path fill="gray" stroke="gray" d="M593.22,-855.8C593.22,-857.84 541.9,-859.5 478.74,-859.5 415.57,-859.5 364.26,-857.84 364.26,-855.8 364.26,-855.8 364.26,-822.5 364.26,-822.5 364.26,-820.46 415.57,-818.8 478.74,-818.8 541.9,-818.8 593.22,-820.46 593.22,-822.5 593.22,-822.5 593.22,-855.8 593.22,-855.8"/>
+<path fill="none" stroke="gray" d="M593.22,-855.8C593.22,-853.76 541.9,-852.1 478.74,-852.1 415.57,-852.1 364.26,-853.76 364.26,-855.8"/>
+<text text-anchor="middle" x="478.74" y="-833.75" font-family="Impact" font-size="18.00">📄 508 Documentos de Texto</text>
+</g>
+<!-- Doc1 -->
+<g id="node2" class="node">
+<title>Doc1</title>
+<polygon fill="lightgray" stroke="gray" points="361.74,-781.8 307.74,-781.8 307.74,-745.8 361.74,-745.8 361.74,-781.8"/>
+<text text-anchor="middle" x="334.74" y="-760.8" font-family="Impact" font-size="10.00">📄 Doc </text>
+</g>
+<!-- DocData&#45;&gt;Doc1 -->
+<g id="edge1" class="edge">
+<title>DocData-&gt;Doc1</title>
+<path fill="none" stroke="black" d="M439.77,-818.3C418.68,-807.56 392.76,-794.35 371.94,-783.75"/>
+<polygon fill="black" stroke="black" points="373.73,-780.73 363.23,-779.31 370.55,-786.97 373.73,-780.73"/>
+</g>
+<!-- Doc2 -->
+<g id="node3" class="node">
+<title>Doc2</title>
+<polygon fill="lightgray" stroke="gray" points="433.74,-781.8 379.74,-781.8 379.74,-745.8 433.74,-745.8 433.74,-781.8"/>
+<text text-anchor="middle" x="406.74" y="-760.8" font-family="Impact" font-size="10.00">📄 Doc </text>
+</g>
+<!-- DocData&#45;&gt;Doc2 -->
+<g id="edge3" class="edge">
+<title>DocData-&gt;Doc2</title>
+<path fill="none" stroke="black" d="M459.44,-818.49C450.89,-809.79 440.73,-799.43 431.62,-790.15"/>
+<polygon fill="black" stroke="black" points="434.19,-787.78 424.69,-783.09 429.2,-792.68 434.19,-787.78"/>
+</g>
+<!-- Doc4 -->
+<g id="node4" class="node">
+<title>Doc4</title>
+<polygon fill="lightgray" stroke="gray" points="505.74,-781.8 451.74,-781.8 451.74,-745.8 505.74,-745.8 505.74,-781.8"/>
+<text text-anchor="middle" x="478.74" y="-760.8" font-family="Impact" font-size="10.00">📄 Doc </text>
+</g>
+<!-- DocData&#45;&gt;Doc4 -->
+<g id="edge9" class="edge">
+<title>DocData-&gt;Doc4</title>
+<path fill="none" stroke="black" d="M478.74,-818.49C478.74,-810.76 478.74,-801.74 478.74,-793.32"/>
+<polygon fill="black" stroke="black" points="482.24,-793.53 478.74,-783.53 475.24,-793.53 482.24,-793.53"/>
+</g>
+<!-- Doc3 -->
+<g id="node5" class="node">
+<title>Doc3</title>
+<polygon fill="lightgray" stroke="gray" points="577.74,-781.8 523.74,-781.8 523.74,-745.8 577.74,-745.8 577.74,-781.8"/>
+<text text-anchor="middle" x="550.74" y="-760.8" font-family="Arial" font-size="10.00">...</text>
+</g>
+<!-- DocData&#45;&gt;Doc3 -->
+<g id="edge5" class="edge">
+<title>DocData-&gt;Doc3</title>
+<path fill="none" stroke="black" d="M498.03,-818.49C506.58,-809.79 516.74,-799.43 525.85,-790.15"/>
+<polygon fill="black" stroke="black" points="528.27,-792.68 532.78,-783.09 523.28,-787.78 528.27,-792.68"/>
+</g>
+<!-- DocN -->
+<g id="node6" class="node">
+<title>DocN</title>
+<polygon fill="lightgray" stroke="gray" points="649.74,-781.8 595.74,-781.8 595.74,-745.8 649.74,-745.8 649.74,-781.8"/>
+<text text-anchor="middle" x="622.74" y="-760.8" font-family="Impact" font-size="10.00">📄 Doc </text>
+</g>
+<!-- DocData&#45;&gt;DocN -->
+<g id="edge7" class="edge">
+<title>DocData-&gt;DocN</title>
+<path fill="none" stroke="black" d="M517.7,-818.3C538.8,-807.56 564.72,-794.35 585.53,-783.75"/>
+<polygon fill="black" stroke="black" points="586.92,-786.97 594.24,-779.31 583.74,-780.73 586.92,-786.97"/>
+</g>
+<!-- PreprocessingText -->
+<g id="node7" class="node">
+<title>PreprocessingText</title>
+<polygon fill="yellow" stroke="gray" points="551.76,-708.8 405.71,-708.8 405.71,-672.8 551.76,-672.8 551.76,-708.8"/>
+<text text-anchor="middle" x="478.74" y="-687.8" font-family="Arial" font-size="10.00">Pré-Processamento de Texto</text>
+</g>
+<!-- Doc1&#45;&gt;PreprocessingText -->
+<g id="edge2" class="edge">
+<title>Doc1-&gt;PreprocessingText</title>
+<path fill="none" stroke="black" d="M362.16,-749.28C382.28,-739.36 410.05,-725.67 433.44,-714.13"/>
+<polygon fill="black" stroke="black" points="434.72,-717.41 442.14,-709.85 431.62,-711.13 434.72,-717.41"/>
+</g>
+<!-- Doc2&#45;&gt;PreprocessingText -->
+<g id="edge4" class="edge">
+<title>Doc2-&gt;PreprocessingText</title>
+<path fill="none" stroke="black" d="M424.17,-745.61C432.86,-737.04 443.54,-726.51 453.14,-717.04"/>
+<polygon fill="black" stroke="black" points="455.48,-719.65 460.14,-710.14 450.56,-714.67 455.48,-719.65"/>
+</g>
+<!-- Doc4&#45;&gt;PreprocessingText -->
+<g id="edge10" class="edge">
+<title>Doc4-&gt;PreprocessingText</title>
+<path fill="none" stroke="black" d="M478.74,-745.61C478.74,-738.03 478.74,-728.9 478.74,-720.34"/>
+<polygon fill="black" stroke="black" points="482.24,-720.34 478.74,-710.34 475.24,-720.34 482.24,-720.34"/>
+</g>
+<!-- Doc3&#45;&gt;PreprocessingText -->
+<g id="edge6" class="edge">
+<title>Doc3-&gt;PreprocessingText</title>
+<path fill="none" stroke="black" d="M533.31,-745.61C524.62,-737.04 513.94,-726.51 504.34,-717.04"/>
+<polygon fill="black" stroke="black" points="506.91,-714.67 497.33,-710.14 501.99,-719.65 506.91,-714.67"/>
+</g>
+<!-- DocN&#45;&gt;PreprocessingText -->
+<g id="edge8" class="edge">
+<title>DocN-&gt;PreprocessingText</title>
+<path fill="none" stroke="black" d="M595.31,-749.28C575.2,-739.36 547.42,-725.67 524.03,-714.13"/>
+<polygon fill="black" stroke="black" points="525.85,-711.13 515.33,-709.85 522.76,-717.41 525.85,-711.13"/>
+</g>
+<!-- CleanText -->
+<g id="node8" class="node">
+<title>CleanText</title>
+<ellipse fill="yellow" stroke="gray" cx="266.74" cy="-617.8" rx="53.07" ry="18"/>
+<text text-anchor="middle" x="266.74" y="-614.8" font-family="Arial" font-size="10.00">🧹 Limpar Texto</text>
+</g>
+<!-- PreprocessingText&#45;&gt;CleanText -->
+<g id="edge11" class="edge">
+<title>PreprocessingText-&gt;CleanText</title>
+<path fill="none" stroke="black" d="M426.6,-672.34C392.35,-660.87 347.87,-645.97 314.53,-634.81"/>
+<polygon fill="black" stroke="black" points="315.71,-631.51 305.11,-631.65 313.48,-638.15 315.71,-631.51"/>
+</g>
+<!-- NormalizeText -->
+<g id="node9" class="node">
+<title>NormalizeText</title>
+<ellipse fill="yellow" stroke="gray" cx="401.74" cy="-617.8" rx="63.75" ry="18"/>
+<text text-anchor="middle" x="401.74" y="-614.8" font-family="Arial" font-size="10.00">🔤 Normalizar Texto</text>
+</g>
+<!-- PreprocessingText&#45;&gt;NormalizeText -->
+<g id="edge12" class="edge">
+<title>PreprocessingText-&gt;NormalizeText</title>
+<path fill="none" stroke="black" d="M460.1,-672.61C450.5,-663.76 438.63,-652.82 428.11,-643.12"/>
+<polygon fill="black" stroke="black" points="430.51,-640.57 420.79,-636.37 425.77,-645.72 430.51,-640.57"/>
+</g>
+<!-- WordTokenize -->
+<g id="node10" class="node">
+<title>WordTokenize</title>
+<ellipse fill="yellow" stroke="gray" cx="556.74" cy="-617.8" rx="72.79" ry="18"/>
+<text text-anchor="middle" x="556.74" y="-614.8" font-family="Arial" font-size="10.00">✂️ Tokenizar Palavras</text>
+</g>
+<!-- PreprocessingText&#45;&gt;WordTokenize -->
+<g id="edge13" class="edge">
+<title>PreprocessingText-&gt;WordTokenize</title>
+<path fill="none" stroke="black" d="M497.62,-672.61C507.37,-663.74 519.42,-652.76 530.1,-643.05"/>
+<polygon fill="black" stroke="black" points="532.14,-645.92 537.18,-636.6 527.43,-640.75 532.14,-645.92"/>
+</g>
+<!-- PartitionTokens -->
+<g id="node11" class="node">
+<title>PartitionTokens</title>
+<ellipse fill="yellow" stroke="gray" cx="725.74" cy="-617.8" rx="78.13" ry="18"/>
+<text text-anchor="middle" x="725.74" y="-614.8" font-family="Arial" font-size="10.00">📦 Particionar em Tokens</text>
+</g>
+<!-- PreprocessingText&#45;&gt;PartitionTokens -->
+<g id="edge14" class="edge">
+<title>PreprocessingText-&gt;PartitionTokens</title>
+<path fill="none" stroke="black" d="M539.48,-672.34C578.48,-661.13 628.85,-646.65 667.38,-635.57"/>
+<polygon fill="black" stroke="black" points="668.32,-638.95 676.97,-632.82 666.39,-632.22 668.32,-638.95"/>
+</g>
+<!-- Embbedings -->
+<g id="node12" class="node">
+<title>Embbedings</title>
+<polygon fill="orange" stroke="gray" points="509.32,-562.8 382.15,-562.8 382.15,-526.8 509.32,-526.8 509.32,-562.8"/>
+<text text-anchor="middle" x="445.74" y="-541.8" font-family="Arial" font-size="10.00">Geração de Embbedings</text>
+</g>
+<!-- CleanText&#45;&gt;Embbedings -->
+<g id="edge15" class="edge">
+<title>CleanText-&gt;Embbedings</title>
+<path fill="none" stroke="black" d="M300.4,-603.45C325.93,-593.32 361.54,-579.19 391.13,-567.46"/>
+<polygon fill="black" stroke="black" points="392.31,-570.76 400.32,-563.82 389.73,-564.25 392.31,-570.76"/>
+</g>
+<!-- NormalizeText&#45;&gt;Embbedings -->
+<g id="edge16" class="edge">
+<title>NormalizeText-&gt;Embbedings</title>
+<path fill="none" stroke="black" d="M412.39,-599.61C417.41,-591.5 423.53,-581.64 429.14,-572.58"/>
+<polygon fill="black" stroke="black" points="432.09,-574.46 434.39,-564.12 426.14,-570.77 432.09,-574.46"/>
+</g>
+<!-- WordTokenize&#45;&gt;Embbedings -->
+<g id="edge17" class="edge">
+<title>WordTokenize-&gt;Embbedings</title>
+<path fill="none" stroke="black" d="M531.27,-600.51C516.85,-591.29 498.57,-579.59 482.61,-569.38"/>
+<polygon fill="black" stroke="black" points="484.61,-566.51 474.3,-564.07 480.84,-572.41 484.61,-566.51"/>
+</g>
+<!-- PartitionTokens&#45;&gt;Embbedings -->
+<g id="edge18" class="edge">
+<title>PartitionTokens-&gt;Embbedings</title>
+<path fill="none" stroke="black" d="M674.71,-603.86C631.68,-592.95 569.52,-577.19 520.82,-564.84"/>
+<polygon fill="black" stroke="black" points="521.72,-561.46 511.16,-562.39 520,-568.24 521.72,-561.46"/>
+</g>
+<!-- SegmentText -->
+<g id="node13" class="node">
+<title>SegmentText</title>
+<ellipse fill="#ee9a00" stroke="gray" cx="174.74" cy="-471.8" rx="112.55" ry="18"/>
+<text text-anchor="middle" x="174.74" y="-468.8" font-family="Arial" font-size="10.00">🧷 Segmentar Texto (CLS, SEP, EOF)</text>
+</g>
+<!-- Embbedings&#45;&gt;SegmentText -->
+<g id="edge19" class="edge">
+<title>Embbedings-&gt;SegmentText</title>
+<path fill="none" stroke="black" d="M381.86,-527.06C340.05,-516.11 285.49,-501.82 242.86,-490.65"/>
+<polygon fill="black" stroke="black" points="243.76,-487.27 233.2,-488.12 241.99,-494.04 243.76,-487.27"/>
+</g>
+<!-- TokensToIdx -->
+<g id="node14" class="node">
+<title>TokensToIdx</title>
+<ellipse fill="#ee9a00" stroke="gray" cx="371.74" cy="-471.8" rx="66.77" ry="18"/>
+<text text-anchor="middle" x="371.74" y="-468.8" font-family="Arial" font-size="10.00">🔢 Tokens → Índices</text>
+</g>
+<!-- Embbedings&#45;&gt;TokensToIdx -->
+<g id="edge20" class="edge">
+<title>Embbedings-&gt;TokensToIdx</title>
+<path fill="none" stroke="black" d="M427.82,-526.61C418.67,-517.83 407.36,-506.98 397.31,-497.33"/>
+<polygon fill="black" stroke="black" points="399.96,-495.03 390.32,-490.63 395.11,-500.08 399.96,-495.03"/>
+</g>
+<!-- BPE -->
+<g id="node15" class="node">
+<title>BPE</title>
+<ellipse fill="#ee9a00" stroke="gray" cx="521.74" cy="-471.8" rx="64.77" ry="18"/>
+<text text-anchor="middle" x="521.74" y="-468.8" font-family="Arial" font-size="10.00">🧠 Tokenizador BPE</text>
+</g>
+<!-- Embbedings&#45;&gt;BPE -->
+<g id="edge21" class="edge">
+<title>Embbedings-&gt;BPE</title>
+<path fill="none" stroke="black" d="M464.13,-526.61C473.54,-517.83 485.15,-506.98 495.47,-497.33"/>
+<polygon fill="black" stroke="black" points="497.75,-500 502.66,-490.62 492.97,-494.89 497.75,-500"/>
+</g>
+<!-- GenerateEmbeddings -->
+<g id="node16" class="node">
+<title>GenerateEmbeddings</title>
+<ellipse fill="#ee9a00" stroke="gray" cx="680.74" cy="-471.8" rx="75.81" ry="18"/>
+<text text-anchor="middle" x="680.74" y="-468.8" font-family="Arial" font-size="10.00">🧠 Vetor de Embeddings</text>
+</g>
+<!-- Embbedings&#45;&gt;GenerateEmbeddings -->
+<g id="edge22" class="edge">
+<title>Embbedings-&gt;GenerateEmbeddings</title>
+<path fill="none" stroke="black" d="M503.52,-526.34C540.35,-515.21 587.83,-500.87 624.38,-489.83"/>
+<polygon fill="black" stroke="black" points="625.33,-493.2 633.89,-486.95 623.31,-486.49 625.33,-493.2"/>
+</g>
+<!-- InitDistributed -->
+<g id="node17" class="node">
+<title>InitDistributed</title>
+<ellipse fill="orangered" stroke="gray" cx="414.74" cy="-398.8" rx="77.13" ry="18"/>
+<text text-anchor="middle" x="414.74" y="-395.8" font-family="Arial" font-size="10.00">[START] torch.distributed</text>
+</g>
+<!-- SegmentText&#45;&gt;InitDistributed -->
+<g id="edge23" class="edge">
+<title>SegmentText-&gt;InitDistributed</title>
+<path fill="none" stroke="black" d="M226.81,-455.39C265.37,-443.99 317.89,-428.45 357.6,-416.7"/>
+<polygon fill="black" stroke="black" points="358.39,-420.12 366.99,-413.93 356.41,-413.41 358.39,-420.12"/>
+</g>
+<!-- TokensToIdx&#45;&gt;InitDistributed -->
+<g id="edge24" class="edge">
+<title>TokensToIdx-&gt;InitDistributed</title>
+<path fill="none" stroke="black" d="M382.15,-453.61C387.06,-445.5 393.03,-435.64 398.52,-426.58"/>
+<polygon fill="black" stroke="black" points="401.45,-428.49 403.64,-418.12 395.46,-424.86 401.45,-428.49"/>
+</g>
+<!-- BPE&#45;&gt;InitDistributed -->
+<g id="edge25" class="edge">
+<title>BPE-&gt;InitDistributed</title>
+<path fill="none" stroke="black" d="M497.46,-454.69C483.06,-445.13 464.58,-432.88 448.75,-422.37"/>
+<polygon fill="black" stroke="black" points="450.82,-419.54 440.55,-416.93 446.95,-425.38 450.82,-419.54"/>
+</g>
+<!-- GenerateEmbeddings&#45;&gt;InitDistributed -->
+<g id="edge26" class="edge">
+<title>GenerateEmbeddings-&gt;InitDistributed</title>
+<path fill="none" stroke="black" d="M631.64,-457.69C587.44,-445.9 522.36,-428.53 475.02,-415.89"/>
+<polygon fill="black" stroke="black" points="476.02,-412.54 465.46,-413.34 474.22,-419.3 476.02,-412.54"/>
+</g>
+<!-- CommBackend -->
+<g id="node18" class="node">
+<title>CommBackend</title>
+<ellipse fill="orangered" stroke="gray" cx="56.74" cy="-325.8" rx="56.74" ry="18"/>
+<text text-anchor="middle" x="56.74" y="-322.8" font-family="Arial" font-size="10.00">📡 NCCL / GLOO</text>
+</g>
+<!-- InitDistributed&#45;&gt;CommBackend -->
+<g id="edge27" class="edge">
+<title>InitDistributed-&gt;CommBackend</title>
+<path fill="none" stroke="black" d="M352.96,-387.65C293.69,-377.62 201.77,-361.26 122.74,-343.8 118.5,-342.86 114.13,-341.85 109.74,-340.79"/>
+<polygon fill="black" stroke="black" points="110.9,-337.47 100.35,-338.48 109.22,-344.27 110.9,-337.47"/>
+</g>
+<!-- BatchNorm -->
+<g id="node19" class="node">
+<title>BatchNorm</title>
+<ellipse fill="orangered" stroke="gray" cx="197.74" cy="-325.8" rx="66.43" ry="18"/>
+<text text-anchor="middle" x="197.74" y="-322.8" font-family="Arial" font-size="10.00">⚖️ Sync BatchNorm</text>
+</g>
+<!-- InitDistributed&#45;&gt;BatchNorm -->
+<g id="edge28" class="edge">
+<title>InitDistributed-&gt;BatchNorm</title>
+<path fill="none" stroke="black" d="M371.08,-383.52C336.05,-372.06 286.77,-355.93 249.71,-343.8"/>
+<polygon fill="black" stroke="black" points="251.14,-340.59 240.55,-340.81 248.97,-347.24 251.14,-340.59"/>
+</g>
+<!-- LR_Scheduler -->
+<g id="node20" class="node">
+<title>LR_Scheduler</title>
+<ellipse fill="orangered" stroke="gray" cx="336.74" cy="-325.8" rx="54.41" ry="18"/>
+<text text-anchor="middle" x="336.74" y="-322.8" font-family="Arial" font-size="10.00">📈 LR Scheduler</text>
+</g>
+<!-- InitDistributed&#45;&gt;LR_Scheduler -->
+<g id="edge29" class="edge">
+<title>InitDistributed-&gt;LR_Scheduler</title>
+<path fill="none" stroke="black" d="M396.25,-380.97C386.37,-371.98 374.03,-360.75 363.15,-350.85"/>
+<polygon fill="black" stroke="black" points="365.69,-348.42 355.94,-344.28 360.98,-353.6 365.69,-348.42"/>
+</g>
+<!-- Quantization -->
+<g id="node21" class="node">
+<title>Quantization</title>
+<ellipse fill="orangered" stroke="gray" cx="493.74" cy="-325.8" rx="84.16" ry="18"/>
+<text text-anchor="middle" x="493.74" y="-322.8" font-family="Arial" font-size="10.00">🧮 Quantização FP16/BF16</text>
+</g>
+<!-- InitDistributed&#45;&gt;Quantization -->
+<g id="edge30" class="edge">
+<title>InitDistributed-&gt;Quantization</title>
+<path fill="none" stroke="black" d="M433.46,-380.97C443.32,-372.11 455.6,-361.07 466.5,-351.27"/>
+<polygon fill="black" stroke="black" points="468.65,-354.05 473.75,-344.76 463.97,-348.84 468.65,-354.05"/>
+</g>
+<!-- Optimizer -->
+<g id="node22" class="node">
+<title>Optimizer</title>
+<ellipse fill="orangered" stroke="gray" cx="690.74" cy="-325.8" rx="94.83" ry="18"/>
+<text text-anchor="middle" x="690.74" y="-322.8" font-family="Arial" font-size="10.00">⚙️ Otimizador (Adam/AdamW)</text>
+</g>
+<!-- InitDistributed&#45;&gt;Optimizer -->
+<g id="edge31" class="edge">
+<title>InitDistributed-&gt;Optimizer</title>
+<path fill="none" stroke="black" d="M465.36,-384.78C510.26,-373.23 576.13,-356.28 625.07,-343.69"/>
+<polygon fill="black" stroke="black" points="625.9,-347.09 634.72,-341.21 624.16,-340.31 625.9,-347.09"/>
+</g>
+<!-- BatchSize -->
+<g id="node23" class="node">
+<title>BatchSize</title>
+<ellipse fill="orangered" stroke="gray" cx="872.74" cy="-325.8" rx="68.79" ry="18"/>
+<text text-anchor="middle" x="872.74" y="-322.8" font-family="Arial" font-size="10.00">🔁 Tamanho do Batch</text>
+</g>
+<!-- InitDistributed&#45;&gt;BatchSize -->
+<g id="edge32" class="edge">
+<title>InitDistributed-&gt;BatchSize</title>
+<path fill="none" stroke="black" d="M482.24,-389.73C558.41,-380.27 685.87,-363.37 794.74,-343.8 800,-342.85 805.45,-341.81 810.91,-340.71"/>
+<polygon fill="black" stroke="black" points="811.51,-344.16 820.59,-338.71 810.09,-337.3 811.51,-344.16"/>
+</g>
+<!-- EpochLoop -->
+<g id="node24" class="node">
+<title>EpochLoop</title>
+<ellipse fill="orangered" stroke="gray" cx="381.74" cy="-252.8" rx="60.77" ry="18"/>
+<text text-anchor="middle" x="381.74" y="-249.8" font-family="Arial" font-size="10.00">🔄 Loop de Épocas</text>
+</g>
+<!-- CommBackend&#45;&gt;EpochLoop -->
+<g id="edge33" class="edge">
+<title>CommBackend-&gt;EpochLoop</title>
+<path fill="none" stroke="black" d="M99.27,-313.53C107.06,-311.56 115.13,-309.57 122.74,-307.8 190.25,-292.08 268.18,-276.12 320.78,-265.68"/>
+<polygon fill="black" stroke="black" points="321.32,-269.14 330.45,-263.76 319.96,-262.27 321.32,-269.14"/>
+</g>
+<!-- BatchNorm&#45;&gt;EpochLoop -->
+<g id="edge34" class="edge">
+<title>BatchNorm-&gt;EpochLoop</title>
+<path fill="none" stroke="black" d="M234.97,-310.43C263.9,-299.27 304.2,-283.72 335.25,-271.74"/>
+<polygon fill="black" stroke="black" points="336.33,-275.07 344.4,-268.21 333.81,-268.54 336.33,-275.07"/>
+</g>
+<!-- LR_Scheduler&#45;&gt;EpochLoop -->
+<g id="edge35" class="edge">
+<title>LR_Scheduler-&gt;EpochLoop</title>
+<path fill="none" stroke="black" d="M347.4,-307.97C352.59,-299.78 358.96,-289.74 364.79,-280.53"/>
+<polygon fill="black" stroke="black" points="367.63,-282.6 370.03,-272.28 361.72,-278.85 367.63,-282.6"/>
+</g>
+<!-- Quantization&#45;&gt;EpochLoop -->
+<g id="edge36" class="edge">
+<title>Quantization-&gt;EpochLoop</title>
+<path fill="none" stroke="black" d="M467.76,-308.33C452.31,-298.54 432.53,-286 415.84,-275.42"/>
+<polygon fill="black" stroke="black" points="418.02,-272.66 407.7,-270.26 414.27,-278.57 418.02,-272.66"/>
+</g>
+<!-- Optimizer&#45;&gt;EpochLoop -->
+<g id="edge37" class="edge">
+<title>Optimizer-&gt;EpochLoop</title>
+<path fill="none" stroke="black" d="M631.89,-311.28C576.68,-298.59 494.61,-279.74 439.69,-267.12"/>
+<polygon fill="black" stroke="black" points="440.75,-263.77 430.22,-264.94 439.19,-270.59 440.75,-263.77"/>
+</g>
+<!-- BatchSize&#45;&gt;EpochLoop -->
+<g id="edge38" class="edge">
+<title>BatchSize-&gt;EpochLoop</title>
+<path fill="none" stroke="black" d="M822.51,-313.2C813.3,-311.26 803.75,-309.37 794.74,-307.8 673.92,-286.77 531.93,-269.91 449.84,-260.92"/>
+<polygon fill="black" stroke="black" points="450.24,-257.44 439.92,-259.84 449.48,-264.4 450.24,-257.44"/>
+</g>
+<!-- Logging -->
+<g id="node25" class="node">
+<title>Logging</title>
+<text text-anchor="middle" x="350.74" y="-161" font-family="Arial" font-size="10.00">📊 Logging de Métricas</text>
+</g>
+<!-- EpochLoop&#45;&gt;Logging -->
+<g id="edge39" class="edge">
+<title>EpochLoop-&gt;Logging</title>
+<path fill="none" stroke="black" d="M375.61,-234.65C371.3,-222.57 365.43,-206.13 360.47,-192.26"/>
+<polygon fill="orangered" stroke="black" points="363.91,-191.48 357.25,-183.24 357.32,-193.84 363.91,-191.48"/>
+<text text-anchor="middle" x="392.33" y="-204.2" font-family="Times,serif" font-size="14.00">evaluate</text>
+</g>
+<!-- Checkpoint -->
+<g id="node26" class="node">
+<title>Checkpoint</title>
+<ellipse fill="orangered" stroke="gray" cx="494.74" cy="-164" rx="66.11" ry="18"/>
+<text text-anchor="middle" x="494.74" y="-161" font-family="Arial" font-size="10.00">💾 Model Checkpoint</text>
+</g>
+<!-- EpochLoop&#45;&gt;Checkpoint -->
+<g id="edge40" class="edge">
+<title>EpochLoop-&gt;Checkpoint</title>
+<path fill="none" stroke="black" d="M402.99,-235.47C420.35,-222.14 445.11,-203.12 464.53,-188.2"/>
+<polygon fill="black" stroke="black" points="466.58,-191.04 472.38,-182.18 462.31,-185.49 466.58,-191.04"/>
+</g>
+<!-- ExportModel -->
+<g id="node27" class="node">
+<title>ExportModel</title>
+<ellipse fill="lightblue" stroke="gray" cx="494.74" cy="-91" rx="92.16" ry="18"/>
+<text text-anchor="middle" x="494.74" y="-88" font-family="Arial" font-size="10.00">🧳 Exportar ONNX/TorchScript</text>
+</g>
+<!-- Checkpoint&#45;&gt;ExportModel -->
+<g id="edge41" class="edge">
+<title>Checkpoint-&gt;ExportModel</title>
+<path fill="none" stroke="black" d="M494.74,-145.81C494.74,-138.23 494.74,-129.1 494.74,-120.54"/>
+<polygon fill="black" stroke="black" points="498.24,-120.54 494.74,-110.54 491.24,-120.54 498.24,-120.54"/>
+</g>
+<!-- Deploy -->
+<g id="node28" class="node">
+<title>Deploy</title>
+<polygon fill="lightblue" stroke="gray" points="553.62,-10.54 553.62,-25.46 519.13,-36 470.35,-36 435.85,-25.46 435.85,-10.54 470.35,0 519.13,0 553.62,-10.54"/>
+<text text-anchor="middle" x="494.74" y="-15" font-family="Arial" font-size="10.00">🚀 Deploy [END]</text>
+</g>
+<!-- ExportModel&#45;&gt;Deploy -->
+<g id="edge42" class="edge">
+<title>ExportModel-&gt;Deploy</title>
+<path fill="none" stroke="black" d="M494.74,-72.81C494.74,-65.23 494.74,-56.1 494.74,-47.54"/>
+<polygon fill="black" stroke="black" points="498.24,-47.54 494.74,-37.54 491.24,-47.54 498.24,-47.54"/>
+</g>
+</g>
+</svg>

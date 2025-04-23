@@ -1,0 +1,93 @@
+<!-- Rendizado em https://dreampuf.github.io/GraphvizOnline/ -->
+
+digraph LlamaFineTuningDAG {
+    rankdir=TD;
+    node [style=filled, fontname="Arial", fontsize=10, 
+        fontcolor="black", shape=ellipse, color="gray", fillcolor="lightgray"];
+
+    // Entrada
+    DocData [label="📄 508 Documentos de Texto", shape=cylinder, fillcolor="gray",
+    fontname="Impact", fontsize=18];
+    Doc1[label="📄 Doc ", shape=box, fillcolor="lightgray", fontname="Impact"];
+    Doc2[label="📄 Doc ", shape=box, fillcolor="lightgray", fontname="Impact"];
+    Doc4[label="📄 Doc ", shape=box, fillcolor="lightgray", fontname="Impact"];
+    Doc3[shape=box, label="...", fillcolor="lightgray"];
+    DocN[label="📄 Doc ", shape=box, fillcolor="lightgray", fontname="Impact"];
+
+    // Preprocessing
+    PreprocessingText [label="Pré-Processamento de Texto", shape=rectangle, fillcolor="yellow"];  
+    CleanText [label="🧹 Limpar Texto", fillcolor="yellow"];
+    NormalizeText [label="🔤 Normalizar Texto", fillcolor="yellow"];
+    WordTokenize [label="✂️ Tokenizar Palavras", fillcolor="yellow"];
+    PartitionTokens [label="📦 Particionar em Tokens", fillcolor="yellow"];
+
+    // Embeddings
+    Embbedings [label="Geração de Embbedings", shape=rectangle, fillcolor="orange"];
+    SegmentText [label="🧷 Segmentar Texto (CLS, SEP, EOF)", fillcolor="orange2"];
+    TokensToIdx [label="🔢 Tokens → Índices", fillcolor="orange2"];
+    BPE [label="🧠 Tokenizador BPE", fillcolor="orange2"];
+    GenerateEmbeddings [label="🧠 Vetor de Embeddings", fillcolor="orange2"];
+
+    // Treinamento
+    InitDistributed [label="[START] torch.distributed", fillcolor="orangered"];
+    CommBackend [label="📡 NCCL / GLOO", fillcolor="orangered"];
+    BatchNorm [label="⚖️ Sync BatchNorm", fillcolor="orangered"];
+    LR_Scheduler [label="📈 LR Scheduler", fillcolor="orangered"];
+    Quantization [label="🧮 Quantização FP16/BF16", fillcolor="orangered"];
+    Optimizer [label="⚙️ Otimizador (Adam/AdamW)", fillcolor="orangered"];
+    BatchSize [label="🔁 Tamanho do Batch", fillcolor="orangered"];
+    EpochLoop [label="🔄 Loop de Épocas", fillcolor="orangered"];
+    Logging [label="📊 Logging de Métricas", fillcolor="red3", shape=plaintext style=""];
+    Checkpoint [label="💾 Model Checkpoint", fillcolor="orangered"];
+
+    // Deploy
+    ExportModel [label="🧳 Exportar ONNX/TorchScript", fillcolor="lightblue"];
+    Deploy [label="🚀 Deploy [END]", shape=octagon, fillcolor="lightblue"];
+
+    // Configuração do Grafo DAG
+    DocData  ->  Doc1 -> PreprocessingText;
+    DocData  ->  Doc2 -> PreprocessingText;
+    DocData  ->  Doc3 -> PreprocessingText;
+    DocData  ->  DocN -> PreprocessingText;
+    DocData  ->  Doc4 -> PreprocessingText;
+    
+    PreprocessingText -> CleanText;
+    PreprocessingText -> NormalizeText;
+    PreprocessingText -> WordTokenize;
+    PreprocessingText -> PartitionTokens;
+    
+    CleanText -> Embbedings
+    NormalizeText -> Embbedings
+    WordTokenize -> Embbedings
+    PartitionTokens -> Embbedings
+    
+    Embbedings -> SegmentText;
+    Embbedings -> TokensToIdx;
+    Embbedings -> BPE;
+    Embbedings -> GenerateEmbeddings;
+
+    SegmentText -> InitDistributed;
+    TokensToIdx -> InitDistributed;
+    BPE         -> InitDistributed;
+    GenerateEmbeddings -> InitDistributed;
+
+    // Fine-Tuning Training
+    InitDistributed -> CommBackend;
+    InitDistributed -> BatchNorm;
+    InitDistributed -> LR_Scheduler;
+    InitDistributed -> Quantization;
+    InitDistributed -> Optimizer;
+    InitDistributed -> BatchSize;
+
+    CommBackend -> EpochLoop;
+    BatchNorm -> EpochLoop;
+    LR_Scheduler -> EpochLoop;
+    Quantization -> EpochLoop;
+    Optimizer -> EpochLoop;
+    BatchSize -> EpochLoop;
+
+    EpochLoop -> Logging [label="evaluate", fillcolor="orangered"];
+    EpochLoop -> Checkpoint;
+
+    Checkpoint -> ExportModel -> Deploy;
+}
