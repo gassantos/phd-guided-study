@@ -44,6 +44,50 @@ digraph LlamaFineTuningDAG {
     ExportModel [label="🧳 Exportar ONNX/TorchScript", fillcolor="lightblue"];
     Deploy [label="🚀 Deploy [END]", shape=octagon, fillcolor="lightblue"];
 
+    // // Subgrafos paralelos para cada documento
+    // subgraph cluster_doc1 {
+    //     label = "Doc1";
+    //     CleanText1 [label="🧹 Limpar Texto", fillcolor="yellow"];
+    //     NormalizeText1 [label="🔤 Normalizar Texto", fillcolor="yellow"];
+    //     WordTokenize1 [label="✂️ Tokenizar Palavras", fillcolor="yellow"];
+    //     PartitionTokens1 [label="📦 Particionar em Tokens", fillcolor="yellow"];
+        
+    //     CleanText1 -> NormalizeText1 -> WordTokenize1 -> PartitionTokens1;
+    // }
+
+    // subgraph cluster_doc2 {
+    //     label = "Doc2";
+    //     CleanText2 [label="🧹 Limpar Texto", fillcolor="yellow"];
+    //     NormalizeText2 [label="🔤 Normalizar Texto", fillcolor="yellow"];
+    //     WordTokenize2 [label="✂️ Tokenizar Palavras", fillcolor="yellow"];
+    //     PartitionTokens2 [label="📦 Particionar em Tokens", fillcolor="yellow"];
+        
+    //     CleanText2 -> NormalizeText2 -> WordTokenize2 -> PartitionTokens2;
+    // }
+
+    // subgraph cluster_docN {
+    //     label = "DocN";
+    //     CleanTextN [label="🧹 Limpar Texto", fillcolor="yellow"];
+    //     NormalizeTextN [label="🔤 Normalizar Texto", fillcolor="yellow"];
+    //     WordTokenizeN [label="✂️ Tokenizar Palavras", fillcolor="yellow"];
+    //     PartitionTokensN [label="📦 Particionar em Tokens", fillcolor="yellow"];
+        
+    //     CleanTextN -> NormalizeTextN -> WordTokenizeN -> PartitionTokensN;
+    // }
+
+    // // Indicador de documentos intermediários
+    // // DocIntermediate [shape=plaintext, label="...", fontsize=24];
+
+    // // Embeddings
+    // Embeddings [label="🧠 Geração de Embeddings", shape=rectangle, fillcolor="orange"];
+
+    // // Conexões paralelas
+    // DocData -> {CleanText1 CleanText2 CleanTextN}
+    // PartitionTokens1 -> Embeddings;
+    // PartitionTokens2 -> Embeddings;
+    // PartitionTokensN -> Embeddings;
+
+
     // Configuração do Grafo DAG
     DocData  ->  Doc1 -> PreprocessingText;
     DocData  ->  Doc2 -> PreprocessingText;
